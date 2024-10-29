@@ -29,6 +29,6 @@ public class StoreController {
     @DeleteMapping("/delete")
     public String updateCache(@RequestParam String key, @RequestParam String value) {
         cache.deleteCache(key, value);
-        return String.format("成功更新cache key:%s value:%s",key,value);
+        return String.format("成功删除cache key:%s value:%s",key,value);
     }
 }
