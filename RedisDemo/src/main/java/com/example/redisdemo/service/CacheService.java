@@ -27,4 +27,8 @@ public class CacheService {
         redisTemplate.opsForValue().set(key,value,180, TimeUnit.SECONDS);
     }
 
+    public void deleteCache(String key,Object value){
+        redisTemplate.opsForValue().set(key,value,0.0000001, TimeUnit.SECONDS);
+    }
+
 }
