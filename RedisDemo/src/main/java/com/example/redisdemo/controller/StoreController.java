@@ -25,4 +25,10 @@ public class StoreController {
         cache.updateCache(key, value);
         return String.format("成功更新cache key:%s value:%s",key,value);
     }
+
+    @DeleteMapping("/delete")
+    public String updateCache(@RequestParam String key, @RequestParam String value) {
+        cache.deleteCache(key, value);
+        return String.format("成功更新cache key:%s value:%s",key,value);
+    }
 }
